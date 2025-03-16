@@ -19,7 +19,6 @@ public class loginPageTest extends baseTest {
 
 	@Test()
 	public void loginWithValidCredentialsTest() throws EncryptedDocumentException, IOException, InterruptedException {
-		// test = reports.createTest("loginWithValidCredentialsTest");
 		loginPage zygalLoginPage = new loginPage(driver);
 		Thread.sleep(3000);		
 		String username = parameterization.getData("loginData", 1, 0);
@@ -27,7 +26,6 @@ public class loginPageTest extends baseTest {
 		zygalLoginPage.enteruserId(username);
 		zygalLoginPage.enterpassword(password);
 		zygalLoginPage.ClickOnSubmit();
-
 	}
 
 }
