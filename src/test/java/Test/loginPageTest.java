@@ -5,8 +5,6 @@ import java.io.IOException;
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import POJO.browser;
 import POM.loginPage;
 import Utility.parameterization;
 
@@ -14,7 +12,7 @@ public class loginPageTest extends baseTest {
 
 	@BeforeMethod
 	public void browserLaunch() {
-		driver = browser.openBrowser();
+		driver = Utility.browserLaunch.openBrowser();
 	}
 
 	@Test()
