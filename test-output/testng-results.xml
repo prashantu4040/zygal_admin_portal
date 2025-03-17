@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-17T13:49:18 IST" name="Default suite" finished-at="2025-03-17T13:49:23 IST" duration-ms="5241">
+  <suite started-at="2025-03-17T17:34:53 IST" name="Automation Suite" finished-at="2025-03-17T17:34:57 IST" duration-ms="4313">
     <groups>
     </groups>
-    <test started-at="2025-03-17T13:49:18 IST" name="Default test" finished-at="2025-03-17T13:49:23 IST" duration-ms="5241">
+    <test started-at="2025-03-17T17:34:53 IST" name="Login Tests" finished-at="2025-03-17T17:34:57 IST" duration-ms="4313">
       <class name="Test.loginPageTest">
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:Test.loginPageTest@198b6731]" started-at="2025-03-17T13:49:18 IST" name="browserLaunch" finished-at="2025-03-17T13:49:21 IST" duration-ms="2957" status="PASS">
+        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:Test.loginPageTest@4c2cc639]" started-at="2025-03-17T17:34:53 IST" name="browserLaunch" finished-at="2025-03-17T17:34:55 IST" duration-ms="2356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method signature="loginWithValidCredentialsTest()[pri:0, instance:Test.loginPageTest@198b6731]" started-at="2025-03-17T13:49:21 IST" name="loginWithValidCredentialsTest" finished-at="2025-03-17T13:49:23 IST" duration-ms="2244" status="PASS">
+        <test-method signature="loginWithValidCredentialsTestFailed()[pri:0, instance:Test.loginPageTest@4c2cc639]" started-at="2025-03-17T17:34:55 IST" name="loginWithValidCredentialsTestFailed" description="User Login with Valid Credentials by prashant" finished-at="2025-03-17T17:34:57 IST" duration-ms="1917" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithValidCredentialsTest -->
+        </test-method> <!-- loginWithValidCredentialsTestFailed -->
       </class> <!-- Test.loginPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Login Tests -->
+  </suite> <!-- Automation Suite -->
 </testng-results>

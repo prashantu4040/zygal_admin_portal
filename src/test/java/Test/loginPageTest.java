@@ -15,8 +15,8 @@ public class loginPageTest extends baseTest {
 		driver = Utility.browserLaunch.openBrowser();
 	}
 
-	@Test()
-	public void loginWithValidCredentialsTest() throws EncryptedDocumentException, IOException, InterruptedException {
+	@Test(description = "User Login with Valid Credentials")
+	public void loginWithValidCredentialsTestFailed() throws EncryptedDocumentException, IOException, InterruptedException {
 		loginPage zygalLoginPage = new loginPage(driver);
 		Thread.sleep(1000);		
 		String username = parameterization.getData("loginData", 1, 0);

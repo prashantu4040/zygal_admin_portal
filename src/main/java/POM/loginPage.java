@@ -48,10 +48,6 @@ public class loginPage {
 		System.out.println(text);
 		return text;
 
-		/*
-		 * public String getErrorText() { String error=geterror.getText();
-		 * System.out.println(error); return error;
-		 */
 	}
 
 }
