@@ -10,14 +10,16 @@ public class loginPage {
 	private WebElement userId;
 	@FindBy(xpath = "//input[@id='user_password_login']")
 	private WebElement password;
+	@FindBy (xpath = "//input[@id='captcha_input_login']")
+	private WebElement captcha;
 	@FindBy(xpath = "//button[@id='submit_login_btn']")
 	private WebElement submit;
 	@FindBy(xpath = "//a[text()='user_forgot_password_btn']")
 	private WebElement forgot_password;
 	@FindBy(xpath = "//a[text()=\"Don't have an account? Signup now!\"]")
 	private WebElement signup;
-	@FindBy(xpath = "//span[text()='User ID should be minimum 6 characters.']")
-	private WebElement geterror;
+	@FindBy(xpath = "//h2[@class='el-notification__title']")
+	private WebElement getError;
 
 	public loginPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -29,6 +31,10 @@ public class loginPage {
 
 	public void enterpassword(String pass) {
 		password.sendKeys(pass);
+	}
+	
+	public void enterCaptcha(String captchaWord) {
+		captcha.sendKeys(captchaWord);
 	}
 
 	public void ClickOnSubmit() {
@@ -43,11 +49,13 @@ public class loginPage {
 		signup.click();
 	}
 
-	public boolean getErrorText() {
-		boolean text = geterror.isDisplayed();
-		System.out.println(text);
-		return text;
-
+	public String getErrorText() {
+		System.out.println(getError);
+	    if (getError.isDisplayed()) {
+	    	//System.out.println("captcha error message" + getError.getText());
+	        return getError.getText();
+	    }
+	    return "No error message displayed";
 	}
 
 }

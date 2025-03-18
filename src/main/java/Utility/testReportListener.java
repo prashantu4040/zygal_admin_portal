@@ -44,7 +44,7 @@ public class testReportListener implements ITestListener {
     public void onFinish(ITestContext context) {
         try (FileOutputStream fileOut = new FileOutputStream(new File(FILE_PATH))) {
             workbook.write(fileOut);
-            System.out.println("Test Report generated: " + FILE_PATH);
+            System.out.println("Test Report generated and the path is: " + FILE_PATH);
         } catch (IOException e) {
             e.printStackTrace();
         }

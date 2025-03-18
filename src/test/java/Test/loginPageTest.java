@@ -16,14 +16,16 @@ public class loginPageTest extends baseTest {
 	}
 
 	@Test(description = "User Login with Valid Credentials")
-	public void loginWithValidCredentialsTestFailed() throws EncryptedDocumentException, IOException, InterruptedException {
+	public void loginWithValidCredentialsTest() throws EncryptedDocumentException, IOException, InterruptedException {
 		loginPage zygalLoginPage = new loginPage(driver);
 		Thread.sleep(1000);		
 		String username = parameterization.getData("loginData", 1, 0);
 		String password = parameterization.getData("loginData", 1, 1);
 		zygalLoginPage.enteruserId(username);
 		zygalLoginPage.enterpassword(password);
+		zygalLoginPage.enterCaptcha("qwerty");
 		zygalLoginPage.ClickOnSubmit();
+		System.out.println(zygalLoginPage.getErrorText());
 	}
 
 }
