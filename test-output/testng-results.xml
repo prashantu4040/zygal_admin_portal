@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-18T13:12:24 IST" name="Automation Suite" finished-at="2025-03-18T13:12:30 IST" duration-ms="5709">
+  <suite started-at="2025-03-21T16:04:31 IST" name="Default suite" finished-at="2025-03-21T16:04:40 IST" duration-ms="9210">
     <groups>
     </groups>
-    <test started-at="2025-03-18T13:12:24 IST" name="Login Tests" finished-at="2025-03-18T13:12:30 IST" duration-ms="5709">
+    <test started-at="2025-03-21T16:04:31 IST" name="Default test" finished-at="2025-03-21T16:04:40 IST" duration-ms="9210">
       <class name="Test.loginPageTest">
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:Test.loginPageTest@4c2cc639]" started-at="2025-03-18T13:12:24 IST" name="browserLaunch" finished-at="2025-03-18T13:12:28 IST" duration-ms="3588" status="PASS">
+        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:Test.loginPageTest@77f1baf5]" started-at="2025-03-21T16:04:31 IST" name="browserLaunch" finished-at="2025-03-21T16:04:38 IST" duration-ms="6566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method signature="loginWithValidCredentialsTest()[pri:0, instance:Test.loginPageTest@4c2cc639]" started-at="2025-03-18T13:12:28 IST" name="loginWithValidCredentialsTest" description="User Login with Valid Credentials" finished-at="2025-03-18T13:12:30 IST" duration-ms="2078" status="PASS">
+        <test-method signature="loginWithValidCredentialsTest()[pri:0, instance:Test.loginPageTest@77f1baf5]" started-at="2025-03-21T16:04:38 IST" name="loginWithValidCredentialsTest" description="User Login with Valid Credentials" finished-at="2025-03-21T16:04:40 IST" duration-ms="2604" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredentialsTest -->
       </class> <!-- Test.loginPageTest -->
-    </test> <!-- Login Tests -->
-  </suite> <!-- Automation Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
