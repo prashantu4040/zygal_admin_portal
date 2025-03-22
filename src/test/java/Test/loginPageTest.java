@@ -23,7 +23,7 @@ public class loginPageTest extends baseTest {
 		String password = parameterization.getData("loginData", 1, 1);
 		zygalLoginPage.enteruserId(username);
 		zygalLoginPage.enterpassword(password);
-		zygalLoginPage.enterCaptcha("qwerty");
+		zygalLoginPage.enterCaptcha();
 		zygalLoginPage.ClickOnSubmit();
 		System.out.println(zygalLoginPage.getErrorText());
 	}

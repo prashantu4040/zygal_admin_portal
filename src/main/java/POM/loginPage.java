@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Config.ConfigReader;
+
 public class loginPage {
 	@FindBy(xpath = "//input[@id='user_email_login']")
 	private WebElement userId;
@@ -18,7 +20,7 @@ public class loginPage {
 	private WebElement forgot_password;
 	@FindBy(xpath = "//a[text()=\"Don't have an account? Signup now!\"]")
 	private WebElement signup;
-	@FindBy(xpath = "//h2[@class='el-notification__title']")
+	@FindBy(xpath = "//div[@role='alert']//div[contains(@class,'el-notification__content')]")
 	private WebElement getError;
 
 	public loginPage(WebDriver driver) {
@@ -33,8 +35,9 @@ public class loginPage {
 		password.sendKeys(pass);
 	}
 	
-	public void enterCaptcha(String captchaWord) {
-		captcha.sendKeys(captchaWord);
+	public void enterCaptcha() {
+		String captchaBypassToken = ConfigReader.getProperty("captcha_token");
+		captcha.sendKeys(captchaBypassToken);
 	}
 
 	public void ClickOnSubmit() {
@@ -50,12 +53,17 @@ public class loginPage {
 	}
 
 	public String getErrorText() {
-		System.out.println(getError);
-	    if (getError.isDisplayed()) {
-	    	//System.out.println("captcha error message" + getError.getText());
-	        return getError.getText();
+	    try {
+	        if (getError.isDisplayed()) {
+	            String errorMessage = getError.getText();
+	            System.out.println("Captcha error message: " + errorMessage);
+	            return errorMessage;
+	        }
+	    } catch (Exception e) {
+	        System.out.println("No error message displayed.");
 	    }
 	    return "No error message displayed";
 	}
+
 
 }
