@@ -1,0 +1,14 @@
+name: Prevent Direct Push to Main
+
+on: push
+
+jobs:
+  prevent-direct-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Branch
+        run: |
+          if [[ "${{ https://github.com/prashantu4040/zygal_admin_portal }}" == "refs/heads/main" ]]; then
+            echo "Direct push to 'main' is not allowed. Use pull requests instead."
+            exit 1
+          fi
