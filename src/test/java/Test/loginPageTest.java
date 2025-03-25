@@ -25,7 +25,7 @@ public class loginPageTest extends baseTest {
 		zygalLoginPage.enterpassword(password);
 		zygalLoginPage.enterCaptcha();
 		zygalLoginPage.ClickOnSubmit();
-		//System.out.println(zygalLoginPage.getErrorText());
+		System.out.println(zygalLoginPage.getErrorText());
 	}
 
 }
