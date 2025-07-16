@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Config.ConfigReader;
-
 public class loginPage {
 	private WebDriver driver;
 
@@ -40,11 +38,6 @@ public class loginPage {
 
 	public void enterpassword(String pass) {
 		password.sendKeys(pass);
-	}
-
-	public void enterCaptcha() {
-		String captchaKey = ConfigReader.getProperty("captcha");
-		captcha.sendKeys(captchaKey);
 	}
 
 	public void ClickOnSubmit() {
